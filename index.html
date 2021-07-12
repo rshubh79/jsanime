@@ -10,13 +10,13 @@
 <body>
     <header>
         <nav>
-            <h3 class="logo"> Dream vacation</h3>
+            <p class="logo">I pray to god that you live your life together haplily</p>
             <img class="hamburger" src="burger.svg " alt="hamburger">
         </nav>
         <section>
             <div class="hero">
-                <img src="burger.jpg">
-                <h1 class="headline">dream big</h1>
+                <img src="congo.jpeg">
+                <h1 class="headline">Congratulations</h1>
             </div>
         </section>
     </header>
@@ -35,7 +35,23 @@ const logo = document.querySelector('.logo');
 const hamburger = document.querySelector('.hamburger');
 const headline = document.querySelector('.headline');
 var tl = new TimelineMax();
-tl.fromTo(hero,1,{width: "0%"}, {width: "80%", ease: Power2.easeInOut}).fromTo(slider,1.2, {x:"-70%"}, {x: "0%", ease: Power2.easeInOut},"-=1.2")
+tl.fromTo(hero,1,{height: "0%"}, {height: "100%", ease: Power2.easeInOut })
+.fromTo(
+    hero,
+    1.2,
+     {width:"80%"},
+      {width: "80%", ease: Power2.easeInOut},
+      )
+.from
+(slider,
+1.2,
+ {x: "-100"},
+ {x: "0%", ease: Power2.easeInOut },
+ "-=1.2"
+ )
+ .fromTo(logo,.5, {opacity: 0, x:30},{ opacity:1,x:0}, "-=.5" )
+ .fromTo(headline,.5, {opacity: 0, x:30},{ opacity:1,x:0}, "-=.5" )
+ 
 
 </script>
 </body>
